@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC Architecture Demonstration - Controller</title>
+</head>
+<body>
+
+    <header>
+        <h1>The Controller Component</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="model.html">Model</a> |
+        <a href="view.html">View</a> |
+        <a href="controller.html">Controller</a>
+    </nav>
+
+    <hr>
+
+    <main>
+        <h2>Definition</h2>
+        <p>
+            The Controller acts as the intermediary between the Model and the View. It receives input from the user (usually through the View), processes that input, interacts with the Model to update or retrieve data, and then selects the appropriate View to display the result back to the user.
+        </p>
+
+        <h2>Responsibilities of the Controller</h2>
+        <ul>
+            <li>Receive and interpret user requests or input.</li>
+            <li>Call the appropriate methods on the Model to fetch or update data.</li>
+            <li>Select and prepare the correct View to display the response.</li>
+            <li>Coordinate the flow of data between the Model and the View.</li>
+            <li>Handle application logic related to navigation and user actions.</li>
+        </ul>
+
+        <h2>Workflow: How a User Request is Processed</h2>
+        <ol>
+            <li>The user interacts with the View, for example by submitting a form.</li>
+            <li>The View sends the user's request to the Controller.</li>
+            <li>The Controller interprets the request and decides what action is needed.</li>
+            <li>The Controller communicates with the Model to retrieve or update the required data.</li>
+            <li>The Model processes the request and returns the result to the Controller.</li>
+            <li>The Controller selects the appropriate View and passes the updated data to it.</li>
+            <li>The View renders the final output and displays it to the user.</li>
+        </ol>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; MVC Architecture Demonstration Project</p>
+    </footer>
+
+</body>
+</html>
