@@ -1,0 +1,422 @@
+/* --- Base Resets & Colors --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #d35400;
+    --bg-light: #fdfefe;
+    --bg-muted: #f4f6f6;
+    --text-dark: #34495e;
+    --text-light: #ffffff;
+    --border-color: #eaeded;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Reusable Components --- */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0 auto;
+}
+
+/* --- Header Section (Flexbox) --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo h2 span {
+    color: var(--accent-color);
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin-left: 2rem;
+}
+
+.nav-menu ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Hero Banner Section --- */
+.hero-banner {
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
+                url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #b33900;
+    transform: translateY(-2px);
+}
+
+/* --- Book Categories Section (Flexbox Layout) --- */
+.categories-section {
+    padding: 5rem 5%;
+    background-color: var(--bg-muted);
+}
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.category-card {
+    background: var(--text-light);
+    padding: 2rem;
+    flex: 1 1 220px;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 6px;
+    border-bottom: 4px solid var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--accent-color);
+}
+
+.category-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* --- Featured Books Section (Grid Layout) --- */
+.featured-section {
+    padding: 5rem 5%;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.book-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.book-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.book-img {
+    width: 100%;
+    height: 250px;
+    object-fit:contain; 
+    display: block;    
+}
+
+.book-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.book-info h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.book-info .author {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 0.8rem;
+}
+
+.book-info .price {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+/* --- Data Table Styling --- */
+.table-container {
+    margin-top: 3rem;
+    overflow-x: auto;
+}
+
+.table-container h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.book-spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.book-spec-table th, .book-spec-table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+.book-spec-table th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.book-spec-table tr:nth-child(even) {
+    background-color: var(--bg-muted);
+}
+
+/* --- Customer Reviews Section --- */
+.reviews-section {
+    padding: 5rem 5%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.reviews-section .section-title {
+    color: var(--text-light);
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+.review-card .quote {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* --- Contact Form Section --- */
+.contact-section {
+    padding: 5rem 5%;
+    background-color: var(--bg-muted);
+}
+
+.contact-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- Footer Section (Flexbox) --- */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: #1a252f;
+    color: #95a5a6;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-left: 1.5rem;
+}
+
+.footer-links ul li a {
+    color: #95a5a6;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: white;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Responsive Logic for Tablets and Mobile Devices)
+   ========================================================================== */
+
+/* --- Tablet Devices (max-width: 900px) --- */
+@media screen and (max-width: 900px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr); /* Drop to 2 columns on tablet */
+        gap: 1.5rem;
+    }
+}
+
+/* --- Mobile Devices (max-width: 600px) --- */
+@media screen and (max-width: 600px) {
+    .main-header {
+        flex-direction: column; /* Stacks brand name above nav menu */
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .nav-menu ul li {
+        margin: 0 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr; /* Stacks to 1 item wide per row on mobile */
+    }
+
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .footer-links ul li {
+        margin: 0 0.7rem;
+    }
+}

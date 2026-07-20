@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Inkwell | Aesthetic Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>The<span>Inkwell</span></h2>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="home" class="hero-banner">
+        <div class="hero-content">
+            <h1>Escape Into Worlds Unseen</h1>
+            <p>Discover a handpicked collection of literary masterpieces, hidden indie gems, and timeless classics tailored for the modern reader.</p>
+            <a href="#featured" class="btn-primary">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Book Categories Section -->
+    <section id="categories" class="categories-section">
+        <h2 class="section-title">Browse by Genre</h2>
+        <div class="categories-container">
+            <div class="category-card">
+                <h3>Fiction</h3>
+                <p>Imaginative narratives and profound storytelling.</p>
+            </div>
+            <div class="category-card">
+                <h3>Sci-Fi & Fantasy</h3>
+                <p>Step through portals into spectacular realities.</p>
+            </div>
+            <div class="category-card">
+                <h3>Biographies</h3>
+                <p>Real human journeys written across history.</p>
+            </div>
+            <div class="category-card">
+                <h3>Mystery & Thrill</h3>
+                <p>Keep guessing until the final final page turns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section id="featured" class="featured-section">
+        <h2 class="section-title">Featured Masterpieces</h2>
+        
+        <!-- Grid for 6 Book Cards -->
+        <div class="book-grid">
+            <!-- Card 1 -->
+            <div class="book-card">
+                <img src="images/MidnightLibrary.jpg" alt="The Midnight Library Cover" class="book-img">
+                <div class="book-info">
+                    <h4>The Midnight Library</h4>
+                    <p class="author">by Matt Haig</p>
+                    <span class="price">$14.99</span>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="book-card">
+                <img src="images/DuneChronicles.jpeg" alt="Dune Chronicles Cover" class="book-img">
+                <div class="book-info">
+                    <h4>Dune Chronicles</h4>
+                    <p class="author">by Frank Herbert</p>
+                    <span class="price">$18.50</span>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="book-card">
+                <img src="images/KiaraAndSun.jpg" alt="Kiara and the Sun Cover" class="book-img">
+                <div class="book-info">
+                    <h4>Klara and the Sun</h4>
+                    <p class="author">by Kazuo Ishiguro</p>
+                    <span class="price">$16.00</span>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="book-card">
+                <img src="images/HailMary.jpeg" alt="Project Hail Mary Cover" class="book-img">
+                <div class="book-info">
+                    <h4>Project Hail Mary</h4>
+                    <p class="author">by Andy Weir</p>
+                    <span class="price">$15.99</span>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="book-card">
+                <img src="images/BCGC.jpeg" alt="Before the Coffee Gets Cold Cover" class="book-img">
+                <div class="book-info">
+                    <h4>Before the Coffee Gets Cold</h4>
+                    <p class="author">by Toshikazu Kawaguchi</p>
+                    <span class="price">$12.95</span>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="book-card">
+                <img src="images/SilentPatient.jpeg" alt="The Silent Patient Cover" class="book-img">
+                <div class="book-info">
+                    <h4>The Silent Patient</h4>
+                    <p class="author">by Alex Michaelides</p>
+                    <span class="price">$13.50</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HTML Table Requirement (Detailed Catalog View) -->
+        <div class="table-container">
+            <h3>Quick Specifications Index</h3>
+            <table class="book-spec-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Midnight Library</td>
+                        <td>Matt Haig</td>
+                        <td>$14.99</td>
+                        <td>4.5/5</td>
+                    </tr>
+                    <tr>
+                        <td>Dune Chronicles</td>
+                        <td>Frank Herbert</td>
+                        <td>$18.50</td>
+                        <td>4.8/5</td>
+                    </tr>
+                    <tr>
+                        <td>Project Hail Mary</td>
+                        <td>Andy Weir</td>
+                        <td>$15.99</td>
+                        <td>4.7/5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <h2 class="section-title">Words From Readers</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <p class="quote">"The Inkwell has completely changed how I shop for books. The curation is stellar, and delivery is beautifully handled."</p>
+                <h5>- Eleanor R.</h5>
+            </div>
+            <div class="review-card">
+                <p class="quote">"Beautiful interface and incredibly fast service. Found three rare editions I'd been tracking down for years!"</p>
+                <h5>- Julian K.</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-wrapper">
+            <h2 class="section-title">Join the Literary Club</h2>
+            <p>Have questions or want customized curation updates? Send us a note.</p>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="What are you searching for?" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-brand">
+            <p>&copy; 2026 The Inkwell Bookstore. Curating stories safely.</p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Support Hub</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

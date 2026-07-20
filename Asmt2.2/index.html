@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVortex & CultFest | College Festival</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section (Flexbox Requirement) -->
+    <header class="event-header">
+        <div class="logo">
+            <h2>Campus<span>Fest'26</span></h2>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#committee">Committee</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Event Banner Section -->
+    <section id="home" class="event-banner">
+        <div class="banner-content">
+            <span class="banner-tagline">Annual National Level Symposium</span>
+            <h1>TechVortex & CultFest</h1>
+            <p>Where code meets creativity. Join thousands of innovators, creators, and performers for three days of absolute brilliance.</p>
+            <a href="#register" class="btn-cta">Secure Your Seat</a>
+        </div>
+    </section>
+
+    <!-- About the Event Section -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">About the Fest</h2>
+        <div class="about-container">
+            <p>Welcome to the ultimate convergence of logic and artistry. TechVortex & CultFest brings together the brightest minds and most passionate performers from across the country. Whether you want to battle it out in intensive hackathons, showcase robust engineering projects, or dazzle on the cultural stage, there is a spotlight waiting just for you.</p>
+            
+            <h3 class="sub-title">Why Participate?</h3>
+            <ul class="benefits-list">
+                <li>National level validation and certification.</li>
+                <li>Cash prizes worth up to $5,000 across multiple categories.</li>
+                <li>Direct networking with top-tier industry professionals and talent scouts.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Event Schedule Section (Table Requirement) -->
+    <section id="schedule" class="schedule-section">
+        <h2 class="section-title">Chronicle Schedule</h2>
+        <div class="table-container">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time & Slot</th>
+                        <th>Technical Track</th>
+                        <th>Cultural Track</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>09:30 AM - 12:30 PM</strong></td>
+                        <td>ByteCraft Hackathon (Kick-off)</td>
+                        <td>Voice Symphony (Solo Singing)</td>
+                        <td>Main Auditorium / Lab 3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>01:30 PM - 04:00 PM</strong></td>
+                        <td>RoboRumble AI Arena</td>
+                        <td>Street Beats (Crew Dance)</td>
+                        <td>Open Plaza Arena</td>
+                    </tr>
+                    <tr>
+                        <td><strong>04:30 PM - 06:30 PM</strong></td>
+                        <td>UI/UX Design Dash</td>
+                        <td>Theatrical Acts & Drama</td>
+                        <td>Seminar Hall-II</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Technical and Cultural Events Section (Grid Requirement - Min 6 Cards) -->
+    <section id="events" class="events-section">
+        <h2 class="section-title">The Competitive Arena</h2>
+        
+        <div class="events-grid">
+            <!-- Card 1 -->
+            <div class="event-card tech">
+                <div class="card-icon">💻</div>
+                <div class="card-info">
+                    <span class="category-tag">Technical</span>
+                    <h4>ByteCraft Hackathon</h4>
+                    <p>A grueling 24-hour sprint to build solutions for real-world environmental challenges.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="event-card tech">
+                <div class="card-icon">🤖</div>
+                <div class="card-info">
+                    <span class="category-tag">Technical</span>
+                    <h4>RoboRumble Arena</h4>
+                    <p>Design, build, and deploy autonomous bots to battle for ultimate mechanical supremacy.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="event-card tech">
+                <div class="card-icon">🎨</div>
+                <div class="card-info">
+                    <span class="category-tag">Technical</span>
+                    <h4>UI/UX Concept Dash</h4>
+                    <p>Craft seamless, accessible responsive dashboard frames under intense time pressure.</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="event-card cult">
+                <div class="card-icon">🎤</div>
+                <div class="card-info">
+                    <span class="category-tag cultural">Cultural</span>
+                    <h4>Voice Symphony</h4>
+                    <p>Showcase acoustic mastery, classical compositions, or modern vocal interpretations.</p>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="event-card cult">
+                <div class="card-icon">🕺</div>
+                <div class="card-info">
+                    <span class="category-tag cultural">Cultural</span>
+                    <h4>Street Beats Dance</h4>
+                    <p>High-energy group choreography and explosive hip-hop styling face-offs.</p>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="event-card cult">
+                <div class="card-icon">🎭</div>
+                <div class="card-info">
+                    <span class="category-tag cultural">Cultural</span>
+                    <h4>Dramatics Spotlight</h4>
+                    <p>Powerful theatrical adaptations, scripting brilliance, and captivating standard monologues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="register" class="registration-section">
+        <div class="form-wrapper">
+            <h2 class="section-title">Register for the Fest</h2>
+            <p class="form-desc">Slots fill rapidly. Choose your paths and claim your pass.</p>
+            
+            <form class="reg-form" action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-name">Full Name</label>
+                        <input type="text" id="reg-name" name="name" placeholder="Enter full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">University Email</label>
+                        <input type="email" id="reg-email" name="email" placeholder="student@university.edu" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-track">Primary Preference</label>
+                    <select id="reg-track" name="track" required>
+                        <option value="">-- Choose a Track --</option>
+                        <option value="tech">Technical Events Bundle</option>
+                        <option value="cult">Cultural Events Bundle</option>
+                        <option value="both">All-Access Combo Pass</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-notes">Special Accommodations / Lab Requirements</label>
+                    <textarea id="reg-notes" name="notes" rows="3" placeholder="Specify team details or dietary restrictions if applicable..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Complete Registration</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Organizing Committee Section (Flexbox Requirement) -->
+    <section id="committee" class="committee-section">
+        <h2 class="section-title">Organizing Council</h2>
+        <div class="committee-container">
+            <div class="member-profile">
+                <div class="avatar-placeholder">🎓</div>
+                <h4>Dr. Arvind Sharma</h4>
+                <p>Chief Convener</p>
+            </div>
+            <div class="member-profile">
+                <div class="avatar-placeholder">⚡</div>
+                <h4>Rohan Malhotra</h4>
+                <p>Technical Lead</p>
+            </div>
+            <div class="member-profile">
+                <div class="avatar-placeholder">✨</div>
+                <h4>Meera Deshmukh</h4>
+                <p>Cultural Head</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section (Flexbox Requirement) -->
+    <footer class="event-footer">
+        <div class="footer-left">
+            <p>&copy; 2026 TechVortex & CultFest Hub. All Rights Reserved.</p>
+        </div>
+        <div class="footer-right">
+            <ul class="social-links">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
