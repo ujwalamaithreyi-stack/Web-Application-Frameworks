@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mini Project</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #38bdf8;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        .box {
+            background: #1e293b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        input,
+        select,
+        button {
+            margin: 5px;
+            padding: 6px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            background: #38bdf8;
+            cursor: pointer;
+        }
+
+        .output {
+            margin-top: 10px;
+            color: #22c55e;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Mini Project</h1>
+
+    <!-- 1. Data Types -->
+
+    <div class="box">
+        <h2>1. Data Types</h2>
+        <button onclick="showTypes()">Show</button>
+        <div class="output" id="out1"></div>
+    </div>
+
+    <!-- 2. Arithmetic -->
+
+    <div class="box">
+        <h2>2. Arithmetic Operations</h2>
+        <input id="numA" type="number" placeholder="A">
+        <input id="numB" type="number" placeholder="B">
+        <button onclick="calculate()">Calculate</button>
+        <div class="output" id="out2"></div>
+    </div>
+
+    <!-- 3. Rectangle -->
+
+    <div class="box">
+        <h2>3. Rectangle</h2>
+        <input id="length" type="number" placeholder="Length">
+        <input id="width" type="number" placeholder="Width">
+        <button onclick="rectangle()">Calculate</button>
+        <div class="output" id="out3"></div>
+    </div>
+
+    <!-- 4. Temperature -->
+
+    <div class="box">
+        <h2>4. Temperature</h2>
+        <input id="temperature" type="number" placeholder="Value">
+        <select id="tempType" title="Temperature conversion type">
+            <option value="c">C → F</option>
+            <option value="f">F → C</option>
+        </select>
+        <button onclick="convertTemperature()">Convert</button>
+        <div class="output" id="out4"></div>
+    </div>
+
+    <!-- 5. Even / Odd -->
+
+    <div class="box">
+        <h2>5. Even or Odd</h2>
+        <input id="evenOddNum" type="number" placeholder="Number">
+        <button onclick="checkEvenOdd()">Check</button>
+        <div class="output" id="out5"></div>
+    </div>
+
+    <!-- 6. Largest -->
+
+    <div class="box">
+        <h2>6. Largest of 3</h2>
+        <input id="n1" type="number" placeholder="n1">
+        <input id="n2" type="number" placeholder="n2">
+        <input id="n3" type="number" placeholder="n3">
+        <button onclick="findLargest()">Find</button>
+        <div class="output" id="out6"></div>
+    </div>
+
+    <!-- 7. Factorial -->
+
+    <div class="box">
+        <h2>7. Factorial</h2>
+        <input id="factNum" type="number" placeHolder="Number">
+        <button onclick="factorial()">Calculate</button>
+        <div class="output" id="out7"></div>
+    </div>
+
+    <!-- 8. Multiplication Table -->
+
+    <div class="box">
+        <h2>8. Multiplication Table</h2>
+        <input id="tableNum" type="number" placeholder="Number">
+        <button onclick="generateTable()">Generate</button>
+        <div class="output" id="out8"></div>
+    </div>
+
+    <!-- 9. Sum -->
+
+    <div class="box">
+        <h2>9. Sum of N Numbers</h2>
+        <input id="sumNum" type="number" placeholder="Number">
+        <button onclick="sumNumbers()">Calculate</button>
+        <div class="output" id="out9"></div>
+    </div>
+
+    <!-- 10. Prime -->
+
+    <div class="box">
+        <h2>10. Prime Check</h2>
+        <input id="primeNum" type="number" placeholder="Number">
+        <button onclick="checkPrime()">Check</button>
+        <div class="output" id="out10"></div>
+    </div>
+
+    <!-- 11. Count Digits -->
+
+    <div class="box">
+        <h2>11. Count Digits</h2>
+        <input id="digitNum" type="number" placeholder="Number">
+        <button onclick="countDigits()">Count</button>
+        <div class="output" id="out11"></div>
+    </div>
+
+    <!-- 12. Reverse Number -->
+
+    <div class="box">
+        <h2>12. Reverse Number</h2>
+        <input id="reverseNum" type="number" placeholder="Number">
+        <button onclick="reverseNumber()">Reverse</button>
+        <div class="output" id="out12"></div>
+    </div>
+
+    <!-- 13. Switch Calculator -->
+
+    <div class="box">
+        <h2>13. Switch Calculator</h2>
+        <input id="calcA" type="number" placeholder="Number A">
+        <input id="calcB" type="number" placeholder="Number B">
+        <select id="operator" title="Select an operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button onclick="switchCalculator()">Calculate</button>
+        <div class="output" id="out13"></div>
+    </div>
+
+    <!-- 14. Student Result -->
+
+    <div class="box">
+        <h2>14. Student Result</h2>
+        <input id="m1" type="number" placeholder="Marks 1">
+        <input id="m2" type="number" placeholder="Marks 2">
+        <input id="m3" type="number" placeholder="Marks 3">
+        <button onclick="calculateResult()">Calculate</button>
+        <div class="output" id="out14"></div>
+    </div>
+
+    <script>
+
+        // 1. Data Types
+        function showTypes() {
+            let name = "John";
+            let age = 20;
+            let isStudent = true;
+
+            document.getElementById("out1").innerHTML =
+                `Name: ${name} <br> Age: ${age} <br> Student: ${isStudent}`;
+        }
+
+        // 2. Arithmetic
+        function calculate() {
+            let a = Number(document.getElementById("numA").value);
+            let b = Number(document.getElementById("numB").value);
+
+            let result = `
+    Add: ${a + b} <br>
+    Sub: ${a - b} <br>
+    Mul: ${a * b} <br>
+    Div: ${a / b} <br>
+    Mod: ${a % b}
+  `;
+
+            document.getElementById("out2").innerHTML = result;
+        }
+
+        // 3. Rectangle
+        function rectangle() {
+            let l = Number(document.getElementById("length").value);
+            let w = Number(document.getElementById("width").value);
+
+            let area = l * w;
+            let perimeter = 2 * (l + w);
+
+            document.getElementById("out3").innerHTML =
+                `Area: ${area} <br> Perimeter: ${perimeter}`;
+        }
+
+        // 4. Temperature
+        function convertTemperature() {
+            let t = Number(document.getElementById("temperature").value);
+            let type = document.getElementById("tempType").value;
+
+            let result = (type === "c")
+                ? (t * 9 / 5) + 32
+                : (t - 32) * 5 / 9;
+
+            document.getElementById("out4").innerHTML = result;
+        }
+
+        // 5. Even / Odd
+        function checkEvenOdd() {
+            let n = Number(document.getElementById("evenOddNum").value);
+            let res = (n % 2 === 0) ? "Even" : "Odd";
+
+            document.getElementById("out5").innerHTML = res;
+        }
+
+        // 6. Largest
+        function findLargest() {
+            let a = Number(n1.value);
+            let b = Number(n2.value);
+            let c = Number(n3.value);
+
+            document.getElementById("out6").innerHTML =
+                Math.max(a, b, c);
+        }
+
+        // 7. Factorial
+        function factorial() {
+            let n = Number(document.getElementById("factNum").value);
+            let f = 1;
+
+            for (let i = 1; i <= n; i++) {
+                f *= i;
+            }
+
+            document.getElementById("out7").innerHTML = f;
+        }
+
+        // 8. Table
+        function generateTable() {
+            let n = Number(document.getElementById("tableNum").value);
+            let output = "";
+
+            for (let i = 1; i <= 10; i++) {
+                output += `${n} x ${i} = ${n * i} <br>`;
+            }
+
+            document.getElementById("out8").innerHTML = output;
+        }
+
+        // 9. Sum
+        function sumNumbers() {
+            let n = Number(document.getElementById("sumNum").value);
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            document.getElementById("out9").innerHTML = sum;
+        }
+
+        // 10. Prime
+        function checkPrime() {
+            let n = Number(document.getElementById("primeNum").value);
+            let isPrime = true;
+
+            if (n <= 1) isPrime = false;
+
+            for (let i = 2; i < n; i++) {
+                if (n % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            document.getElementById("out10").innerHTML =
+                isPrime ? "Prime" : "Not Prime";
+        }
+
+        // 11. Count Digits
+        function countDigits() {
+            let n = Number(document.getElementById("digitNum").value);
+            let count = 0;
+
+            while (n > 0) {
+                n = Math.floor(n / 10);
+                count++;
+            }
+
+            document.getElementById("out11").innerHTML = count;
+        }
+
+        // 12. Reverse
+        function reverseNumber() {
+            let n = Number(document.getElementById("reverseNum").value);
+            let rev = 0;
+
+            while (n > 0) {
+                let rem = n % 10;
+                rev = rev * 10 + rem;
+                n = Math.floor(n / 10);
+            }
+
+            document.getElementById("out12").innerHTML = rev;
+        }
+
+        // 13. Switch Calculator
+        function switchCalculator() {
+            let a = Number(calcA.value);
+            let b = Number(calcB.value);
+            let op = operator.value;
+            let res;
+
+            switch (op) {
+                case '+': res = a + b; break;
+                case '-': res = a - b; break;
+                case '*': res = a * b; break;
+                case '/': res = a / b; break;
+                default: res = "Invalid";
+            }
+
+            document.getElementById("out13").innerHTML = res;
+        }
+
+        // 14. Student Result
+        function calculateResult() {
+            let a = Number(m1.value);
+            let b = Number(m2.value);
+            let c = Number(m3.value);
+
+            let total = a + b + c;
+            let avg = total / 3;
+
+            let grade =
+                avg >= 90 ? "A" :
+                    avg >= 75 ? "B" :
+                        avg >= 50 ? "C" : "Fail";
+
+            document.getElementById("out14").innerHTML =
+                `Total: ${total} <br> Avg: ${avg} <br> Grade: ${grade}`;
+        }
+
+    </script>
+
+</body>
+
+</html>
