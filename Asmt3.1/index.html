@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -9,47 +8,29 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
+            font-family: Arial;
             padding: 20px;
         }
 
-        h1 {
-            color: #38bdf8;
-        }
-
-        h2 {
-            margin-bottom: 5px;
-        }
-
-        .box {
-            background: #1e293b;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 10px;
+        section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
         }
 
         input,
-        select,
-        button {
+        button,
+        select {
             margin: 5px;
-            padding: 6px;
-            border-radius: 5px;
-            border: none;
         }
 
-        button {
-            background: #38bdf8;
-            cursor: pointer;
-        }
-
-        .output {
-            margin-top: 10px;
-            color: #22c55e;
+        .color-box-37, .mouseArea33 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            padding: 10px;
         }
     </style>
-
 </head>
 
 <body>
@@ -58,176 +39,568 @@
 
     <!-- 1. Data Types -->
 
-    <div class="box">
+    <section>
         <h2>1. Data Types</h2>
         <button onclick="showTypes()">Show</button>
-        <div class="output" id="out1"></div>
-    </div>
+        <div id="out1"></div>
+    </section>
+
 
     <!-- 2. Arithmetic -->
 
-    <div class="box">
+    <section>
         <h2>2. Arithmetic Operations</h2>
         <input id="numA" type="number" placeholder="A">
         <input id="numB" type="number" placeholder="B">
         <button onclick="calculate()">Calculate</button>
-        <div class="output" id="out2"></div>
-    </div>
+        <div id="out2"></div>
+    </section>
+
 
     <!-- 3. Rectangle -->
 
-    <div class="box">
+    <section>
         <h2>3. Rectangle</h2>
         <input id="length" type="number" placeholder="Length">
         <input id="width" type="number" placeholder="Width">
         <button onclick="rectangle()">Calculate</button>
-        <div class="output" id="out3"></div>
-    </div>
+        <div id="out3"></div>
+    </section>
+
 
     <!-- 4. Temperature -->
 
-    <div class="box">
+    <section>
         <h2>4. Temperature</h2>
+
         <input id="temperature" type="number" placeholder="Value">
+
         <select id="tempType" title="Temperature conversion type">
             <option value="c">C → F</option>
             <option value="f">F → C</option>
         </select>
+
         <button onclick="convertTemperature()">Convert</button>
-        <div class="output" id="out4"></div>
-    </div>
+
+        <div id="out4"></div>
+    </section>
+
 
     <!-- 5. Even / Odd -->
 
-    <div class="box">
+    <section>
         <h2>5. Even or Odd</h2>
+
         <input id="evenOddNum" type="number" placeholder="Number">
+
         <button onclick="checkEvenOdd()">Check</button>
-        <div class="output" id="out5"></div>
-    </div>
+
+        <div id="out5"></div>
+    </section>
+
 
     <!-- 6. Largest -->
 
-    <div class="box">
+    <section>
         <h2>6. Largest of 3</h2>
+
         <input id="n1" type="number" placeholder="n1">
         <input id="n2" type="number" placeholder="n2">
         <input id="n3" type="number" placeholder="n3">
+
         <button onclick="findLargest()">Find</button>
-        <div class="output" id="out6"></div>
-    </div>
+
+        <div id="out6"></div>
+    </section>
+
 
     <!-- 7. Factorial -->
 
-    <div class="box">
+    <section>
         <h2>7. Factorial</h2>
-        <input id="factNum" type="number" placeHolder="Number">
+
+        <input id="factNum" type="number" placeholder="Number">
+
         <button onclick="factorial()">Calculate</button>
-        <div class="output" id="out7"></div>
-    </div>
+
+        <div id="out7"></div>
+    </section>
+
 
     <!-- 8. Multiplication Table -->
 
-    <div class="box">
+    <section>
         <h2>8. Multiplication Table</h2>
+
         <input id="tableNum" type="number" placeholder="Number">
+
         <button onclick="generateTable()">Generate</button>
-        <div class="output" id="out8"></div>
-    </div>
+
+        <div id="out8"></div>
+    </section>
+
 
     <!-- 9. Sum -->
 
-    <div class="box">
+    <section>
         <h2>9. Sum of N Numbers</h2>
+
         <input id="sumNum" type="number" placeholder="Number">
+
         <button onclick="sumNumbers()">Calculate</button>
-        <div class="output" id="out9"></div>
-    </div>
+
+        <div id="out9"></div>
+    </section>
+
 
     <!-- 10. Prime -->
 
-    <div class="box">
+    <section>
         <h2>10. Prime Check</h2>
+
         <input id="primeNum" type="number" placeholder="Number">
+
         <button onclick="checkPrime()">Check</button>
-        <div class="output" id="out10"></div>
-    </div>
+
+        <div id="out10"></div>
+    </section>
+
 
     <!-- 11. Count Digits -->
 
-    <div class="box">
+    <section>
         <h2>11. Count Digits</h2>
+
         <input id="digitNum" type="number" placeholder="Number">
+
         <button onclick="countDigits()">Count</button>
-        <div class="output" id="out11"></div>
-    </div>
+
+        <div id="out11"></div>
+    </section>
+
 
     <!-- 12. Reverse Number -->
 
-    <div class="box">
+    <section>
         <h2>12. Reverse Number</h2>
+
         <input id="reverseNum" type="number" placeholder="Number">
+
         <button onclick="reverseNumber()">Reverse</button>
-        <div class="output" id="out12"></div>
-    </div>
+
+        <div id="out12"></div>
+    </section>
+
 
     <!-- 13. Switch Calculator -->
 
-    <div class="box">
+    <section>
         <h2>13. Switch Calculator</h2>
+
         <input id="calcA" type="number" placeholder="Number A">
         <input id="calcB" type="number" placeholder="Number B">
-        <select id="operator" title="Select an operator">
+
+        <label for="operator">Operator</label>
+        <select id="operator" aria-label="Operator">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
             <option value="/">/</option>
         </select>
+
         <button onclick="switchCalculator()">Calculate</button>
-        <div class="output" id="out13"></div>
-    </div>
+
+        <div id="out13"></div>
+    </section>
+
 
     <!-- 14. Student Result -->
 
-    <div class="box">
+    <section>
         <h2>14. Student Result</h2>
+
         <input id="m1" type="number" placeholder="Marks 1">
         <input id="m2" type="number" placeholder="Marks 2">
         <input id="m3" type="number" placeholder="Marks 3">
+
         <button onclick="calculateResult()">Calculate</button>
-        <div class="output" id="out14"></div>
-    </div>
+
+        <div id="out14"></div>
+    </section>
+
+
+    <!-- 15. Change Text -->
+
+    <section>
+        <h2>15. Change Text</h2>
+
+        <p id="text15">Hello</p>
+
+        <button onclick="changeText()">Change</button>
+    </section>
+
+
+    <!-- 16. Background -->
+
+    <section>
+        <h2>16. Change Background</h2>
+
+        <button onclick="changeBg()">Change Color</button>
+    </section>
+
+
+    <!-- 17. Form -->
+
+    <section>
+        <h2>17. Form Input</h2>
+
+        <input id="name17" placeholder="Name">
+
+        <button onclick="showName()">Submit</button>
+
+        <p id="nameResult"></p>
+    </section>
+
+
+    <!-- 18. Counter -->
+
+    <section>
+        <h2>18. Counter</h2>
+
+        <p id="count">0</p>
+
+        <button onclick="inc()">+</button>
+        <button onclick="dec()">-</button>
+        <button onclick="reset()">Reset</button>
+    </section>
+
+
+    <!-- 19. Even/Odd Range -->
+
+    <section>
+        <h2>19. Range</h2>
+
+        <input id="start" type="number" placeholder="Start">
+        <input id="end" type="number" placeholder="End">
+
+        <button onclick="range()">Show</button>
+
+        <p id="rangeResult"></p>
+    </section>
+
+
+    <!-- 20. Mini Calculator -->
+
+    <section>
+        <h2>20. Mini Calculator</h2>
+
+        <input id="mini" placeholder="Enter expression">
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('+')">+</button>
+        <button onclick="append('-')">-</button>
+        <button onclick="append('*')">*</button>
+        <button onclick="append('/')">/</button>
+        <button onclick="calcMini()">=</button>
+
+        <p id="miniResult"></p>
+    </section>
+
+
+    <!-- 21. Validate Email -->
+
+    <section>
+        <h2>21. Email Validation</h2>
+
+        <input id="email" placeholder="Email">
+
+        <button onclick="checkEmail()">Validate</button>
+
+        <p id="emailResult"></p>
+    </section>
+
+
+    <!-- 22. Valid Mobile -->
+
+    <section>
+        <h2>22. Mobile Validation</h2>
+
+        <input id="mobile" placeholder="Mobile">
+
+        <button onclick="checkMobile()">Validate</button>
+
+        <p id="phoneResult"></p>
+    </section>
+
+
+    <!-- 23. Valid Password -->
+
+    <section>
+        <h2>23. Password Validation</h2>
+
+        <input id="pass" type="password" placeholder="Password">
+
+        <button onclick="checkPass()">Validate</button>
+
+        <p id="passResult"></p>
+    </section>
+
+
+    <!-- 24. Only Alphabets -->
+
+    <section>
+        <h2>24. Only Alphabets</h2>
+
+        <input id="text" placeholder="Text">
+
+        <button onclick="checkAlpha()">Check</button>
+
+        <p id="alphaResult"></p>
+    </section>
+
+
+    <!-- 25. Only Numbers -->
+
+    <section>
+        <h2>25. Only Numbers</h2>
+
+        <input id="number25" placeholder="Enter number">
+
+        <button onclick="checkNumbers()">Check</button>
+
+        <p id="numberResult"></p>
+    </section>
+
+
+    <!-- 26. Registration Form -->
+
+    <section>
+        <h2>26. Registration Form</h2>
+
+        <input id="regName" placeholder="Name">
+        <input id="regEmail" placeholder="Email">
+        <input id="regMobile" placeholder="Mobile">
+        <input id="regPassword" type="password" placeholder="Password">
+
+        <button onclick="validateRegistration()">Register</button>
+
+        <p id="registrationResult"></p>
+    </section>
+
+
+    <!-- 27. Strong Password -->
+
+    <section>
+        <h2>27. Strong Password</h2>
+
+        <input id="strongPass" type="password" placeholder="Password">
+
+        <button onclick="checkStrongPassword()">Check</button>
+
+        <p id="strongPassResult"></p>
+    </section>
+
+
+    <!-- 28. Username -->
+
+    <section>
+        <h2>28. Username Validation</h2>
+
+        <input id="username28" placeholder="Username">
+
+        <button onclick="checkUsername()">Check</button>
+
+        <p id="usernameResult"></p>
+    </section>
+
+
+    <!-- 29. Name + Email + Mobile + PIN -->
+
+    <section>
+        <h2>29. Form Validation</h2>
+
+        <input id="name29" placeholder="Name">
+        <input id="email29" placeholder="Email">
+        <input id="mobile29" placeholder="Mobile">
+        <input id="pin29" placeholder="PIN Code">
+
+        <button onclick="validateForm29()">Validate</button>
+
+        <p id="form29Result"></p>
+    </section>
+
+
+    <!-- 30. Email + Mobile + Password -->
+
+    <section>
+        <h2>30. Email, Mobile and Password Validation</h2>
+
+        <input id="email30" placeholder="Email">
+        <input id="mobile30" placeholder="Mobile">
+        <input id="password30" type="password" placeholder="Password">
+
+        <button onclick="validateAll30()">Validate</button>
+
+        <p id="result30"></p>
+
+
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptates inventore quod at ab natus sint placeat. Error minima sed quaerat amet suscipit vitae repudiandae mollitia adipisci aspernatur quidem dolore nisi nobis, voluptatem beatae nam laudantium totam accusamus ex! Odio adipisci ad officiis quos, rem earum culpa unde? Qui labore consectetur illo odio voluptatibus! Sed laborum velit similique debitis officiis, culpa qui dicta commodi itaque eum totam, nulla in perferendis optio numquam quam, esse dolores voluptatum! Deserunt nam obcaecati odio quos placeat laborum! Quas dignissimos expedita officiis qui. Voluptatibus enim doloribus sit voluptatum vel. Dolor quis impedit explicabo quo repellendus, magnam nisi inventore in veniam ea doloribus excepturi ratione eum? Esse dolore est vitae aut veniam animi autem repudiandae provident nemo, atque ab repellendus minima, nulla cupiditate eaque expedita quas, laboriosam blanditiis pariatur illo reiciendis enim hic. Expedita, culpa minima! Minima culpa labore tempora ea illo iste consequatur, sint, quae fugit architecto veniam consectetur amet voluptatem earum expedita itaque voluptas placeat neque cum recusandae quas quaerat. Veniam possimus praesentium expedita repellat nobis numquam eaque suscipit tempore nulla culpa, doloribus enim, recusandae itaque ipsum corporis cum quidem dolorum odio est! Ab tempora sapiente quo nemo facilis assumenda, iste, dicta nisi dolorem natus rem perspiciatis? Voluptatem pariatur, aperiam atque, facere maiores cumque eligendi nesciunt esse saepe ratione hic nisi modi! Neque incidunt deleniti unde ea laboriosam? Possimus consequatur nostrum maiores? Ab non dolores cum, quas quia illo tempore debitis ex doloremque impedit perferendis totam reprehenderit ratione quis molestiae quod amet aliquam possimus maiores voluptatem molestias voluptates laudantium sit praesentium? Praesentium repellendus amet atque quia doloribus commodi officiis nam magnam distinctio quidem laborum dignissimos dolorum tempora, perferendis nisi itaque fugit asperiores voluptate? Delectus ipsa laborum modi ducimus aliquid assumenda voluptas cum vel pariatur eveniet temporibus fugiat repellat enim expedita, sunt maxime maiores. Placeat et dicta inventore aspernatur corporis saepe obcaecati, eos excepturi ut reprehenderit, aut veniam reiciendis itaque? Numquam, accusantium sapiente! Nihil quas placeat reprehenderit maxime repellat! Iste facere quia nam ab id. Quas at quia, accusantium non nihil neque suscipit animi quae voluptate, similique voluptates placeat. Accusantium beatae laborum perspiciatis eligendi reprehenderit porro illo, ex, tenetur in quas molestiae vel velit cum fuga modi autem odit repellendus corporis? Culpa quae maiores beatae magni quod, ea autem aperiam voluptatum inventore? Assumenda blanditiis, qui aliquid cumque, cupiditate fugiat provident placeat debitis ex quaerat fugit officia deleniti nulla sunt. Harum ullam iste, tempora tempore id fugit tenetur aliquam quod in aspernatur impedit inventore, nemo totam dignissimos mollitia at vitae consequatur perferendis odit perspiciatis placeat qui quam unde. Tenetur enim molestiae amet eligendi nemo adipisci blanditiis rerum recusandae itaque nostrum, corrupti nisi voluptatibus quis harum architecto dignissimos sequi quod in eos expedita voluptatem. Quia recusandae eum saepe reprehenderit quas mollitia quisquam dolor quod.</p>
+    </section>
+
+
+
+    <!-- 31. onclick Alert -->
+
+    <section>
+        <h2>31. Alert on Button Click</h2>
+        <button onclick="showAlert31()">Click Me</button>
+    </section>
+
+
+    <!-- 32. mouseover Background -->
+
+    <section>
+        <h2>32. Change Background on Mouseover</h2>
+        <button onmouseover="changeBgMouseover32()">Move Mouse Over Me</button>
+    </section>
+
+
+    <!-- 33. mousemove Coordinates -->
+
+    <section>
+        <h2>33. Mouse Coordinates</h2>
+        <div id="mouseArea33"
+             onmousemove="showCoordinates33(event)">
+            Move the mouse inside this div
+        </div>
+        <p id="coordinates33"></p>
+    </section>
+
+
+    <!-- 34. Change Paragraph Text -->
+
+    <section>
+        <h2>34. Change Paragraph Text on Button Click</h2>
+        <p id="text34">Original paragraph text</p>
+        <button onclick="changeParagraph34()">Change Text</button>
+    </section>
+
+
+    <!-- 35. keydown Event -->
+
+    <section>
+        <h2>35. Keydown Event</h2>
+        <input id="keyInput35" type="text"
+               onkeydown="showKeyMessage35(event)"
+               placeholder="Press any key">
+        <p id="keyMessage35"></p>
+    </section>
+
+
+    <!-- 36. Counter using Event Handling -->
+
+    <section>
+        <h2>36. Counter</h2>
+        <p id="counter36">0</p>
+        <button onclick="increment36()">Increment</button>
+        <button onclick="decrement36()">Decrement</button>
+    </section>
+
+
+    <!-- 37. Mouse Enter / Leave -->
+
+    <section>
+        <h2>37. Interactive Background</h2>
+        <div id="colorBox37"
+             onmouseenter="enterDiv37()"
+             onmouseleave="leaveDiv37()">
+            Move the mouse into and out of this div
+        </div>
+    </section>
+
+
+    <!-- 38. Form Submit -->
+
+    <section>
+        <h2>38. Form Submission</h2>
+        <form onsubmit="submitForm38(event)">
+            <input id="name38" type="text" placeholder="Name" required>
+            <input id="email38" type="email" placeholder="Email" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="formResult38"></p>
+    </section>
+
+
+    <!-- 39. Image Gallery -->
+
+    <section>
+        <h2>39. Simple Image Gallery</h2>
+        <img id="galleryImage39"
+             src="https://tse4.mm.bing.net/th/id/OIP.ayACpdslq2Oq9hSUQnfMWQHaF1?r=0&pid=Api&P=0&h=180"
+             alt="Gallery Image"
+             width="300">
+        <br>
+        <button onclick="previousImage39()">Previous</button>
+        <button onclick="nextImage39()">Next</button>
+    </section>
+
+
+    <!-- 40. Character Counter -->
+
+    <section>
+        <h2>40. Character Counter</h2>
+        <textarea id="textBox40"
+                  oninput="countCharacters40()"
+                  rows="4"
+                  cols="40"
+                  placeholder="Type something..."></textarea>
+        <p>Characters: <span id="charCount40">0</span></p>
+    </section>
 
     <script>
 
         // 1. Data Types
+
         function showTypes() {
+
             let name = "John";
             let age = 20;
             let isStudent = true;
 
             document.getElementById("out1").innerHTML =
-                `Name: ${name} <br> Age: ${age} <br> Student: ${isStudent}`;
+                `Name: ${name} <br>
+                 Age: ${age} <br>
+                 Student: ${isStudent}`;
         }
 
+
         // 2. Arithmetic
+
         function calculate() {
+
             let a = Number(document.getElementById("numA").value);
             let b = Number(document.getElementById("numB").value);
 
             let result = `
-    Add: ${a + b} <br>
-    Sub: ${a - b} <br>
-    Mul: ${a * b} <br>
-    Div: ${a / b} <br>
-    Mod: ${a % b}
-  `;
+                Add: ${a + b} <br>
+                Sub: ${a - b} <br>
+                Mul: ${a * b} <br>
+                Div: ${a / b} <br>
+                Mod: ${a % b}
+            `;
 
             document.getElementById("out2").innerHTML = result;
         }
 
+
         // 3. Rectangle
+
         function rectangle() {
+
             let l = Number(document.getElementById("length").value);
             let w = Number(document.getElementById("width").value);
 
@@ -235,11 +608,15 @@
             let perimeter = 2 * (l + w);
 
             document.getElementById("out3").innerHTML =
-                `Area: ${area} <br> Perimeter: ${perimeter}`;
+                `Area: ${area} <br>
+                 Perimeter: ${perimeter}`;
         }
 
+
         // 4. Temperature
+
         function convertTemperature() {
+
             let t = Number(document.getElementById("temperature").value);
             let type = document.getElementById("tempType").value;
 
@@ -250,26 +627,36 @@
             document.getElementById("out4").innerHTML = result;
         }
 
+
         // 5. Even / Odd
+
         function checkEvenOdd() {
+
             let n = Number(document.getElementById("evenOddNum").value);
+
             let res = (n % 2 === 0) ? "Even" : "Odd";
 
             document.getElementById("out5").innerHTML = res;
         }
 
+
         // 6. Largest
+
         function findLargest() {
-            let a = Number(n1.value);
-            let b = Number(n2.value);
-            let c = Number(n3.value);
+
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            let c = Number(document.getElementById("n3").value);
 
             document.getElementById("out6").innerHTML =
                 Math.max(a, b, c);
         }
 
+
         // 7. Factorial
+
         function factorial() {
+
             let n = Number(document.getElementById("factNum").value);
             let f = 1;
 
@@ -280,20 +667,28 @@
             document.getElementById("out7").innerHTML = f;
         }
 
-        // 8. Table
+
+        // 8. Multiplication Table
+
         function generateTable() {
+
             let n = Number(document.getElementById("tableNum").value);
             let output = "";
 
             for (let i = 1; i <= 10; i++) {
-                output += `${n} x ${i} = ${n * i} <br>`;
+
+                output +=
+                    `${n} x ${i} = ${n * i} <br>`;
             }
 
             document.getElementById("out8").innerHTML = output;
         }
 
+
         // 9. Sum
+
         function sumNumbers() {
+
             let n = Number(document.getElementById("sumNum").value);
             let sum = 0;
 
@@ -304,14 +699,20 @@
             document.getElementById("out9").innerHTML = sum;
         }
 
+
         // 10. Prime
+
         function checkPrime() {
+
             let n = Number(document.getElementById("primeNum").value);
             let isPrime = true;
 
-            if (n <= 1) isPrime = false;
+            if (n <= 1) {
+                isPrime = false;
+            }
 
             for (let i = 2; i < n; i++) {
+
                 if (n % i === 0) {
                     isPrime = false;
                     break;
@@ -322,67 +723,633 @@
                 isPrime ? "Prime" : "Not Prime";
         }
 
+
         // 11. Count Digits
+
         function countDigits() {
-            let n = Number(document.getElementById("digitNum").value);
+
+            let n = Math.abs(Number(document.getElementById("digitNum").value));
             let count = 0;
 
-            while (n > 0) {
-                n = Math.floor(n / 10);
-                count++;
+            if (n === 0) {
+                count = 1;
+            }
+            else {
+                while (n > 0) {
+
+                    n = Math.floor(n / 10);
+                    count++;
+                }
             }
 
             document.getElementById("out11").innerHTML = count;
         }
 
+
         // 12. Reverse
+
         function reverseNumber() {
+
             let n = Number(document.getElementById("reverseNum").value);
             let rev = 0;
 
             while (n > 0) {
+
                 let rem = n % 10;
+
                 rev = rev * 10 + rem;
+
                 n = Math.floor(n / 10);
             }
 
             document.getElementById("out12").innerHTML = rev;
         }
 
+
         // 13. Switch Calculator
+
         function switchCalculator() {
-            let a = Number(calcA.value);
-            let b = Number(calcB.value);
-            let op = operator.value;
+
+            let a = Number(document.getElementById("calcA").value);
+            let b = Number(document.getElementById("calcB").value);
+            let op = document.getElementById("operator").value;
+
             let res;
 
             switch (op) {
-                case '+': res = a + b; break;
-                case '-': res = a - b; break;
-                case '*': res = a * b; break;
-                case '/': res = a / b; break;
-                default: res = "Invalid";
+
+                case '+':
+                    res = a + b;
+                    break;
+
+                case '-':
+                    res = a - b;
+                    break;
+
+                case '*':
+                    res = a * b;
+                    break;
+
+                case '/':
+                    res = a / b;
+                    break;
+
+                default:
+                    res = "Invalid";
             }
 
             document.getElementById("out13").innerHTML = res;
         }
 
+
         // 14. Student Result
+
         function calculateResult() {
-            let a = Number(m1.value);
-            let b = Number(m2.value);
-            let c = Number(m3.value);
+
+            let a = Number(document.getElementById("m1").value);
+            let b = Number(document.getElementById("m2").value);
+            let c = Number(document.getElementById("m3").value);
 
             let total = a + b + c;
             let avg = total / 3;
 
             let grade =
                 avg >= 90 ? "A" :
-                    avg >= 75 ? "B" :
-                        avg >= 50 ? "C" : "Fail";
+                avg >= 75 ? "B" :
+                avg >= 50 ? "C" :
+                "Fail";
 
             document.getElementById("out14").innerHTML =
-                `Total: ${total} <br> Avg: ${avg} <br> Grade: ${grade}`;
+                `Total: ${total} <br>
+                 Avg: ${avg} <br>
+                 Grade: ${grade}`;
+        }
+
+
+        // 15. Change Text
+
+        function changeText() {
+
+            document.getElementById("text15").innerHTML =
+                "Text Changed!";
+        }
+
+
+        // 16. Change Background
+
+        function changeBg() {
+
+            document.body.style.background = "lightblue";
+        }
+
+
+        // 17. Form Input
+
+        function showName() {
+
+            let name = document.getElementById("name17").value;
+
+            document.getElementById("nameResult").innerHTML =
+                name;
+        }
+
+
+        // 18. Counter
+
+        let count = 0;
+
+        function inc() {
+            count++;
+            update();
+        }
+
+        function dec() {
+            count--;
+            update();
+        }
+
+        function reset() {
+            count = 0;
+            update();
+        }
+
+        function update() {
+
+            document.getElementById("count").innerHTML =
+                count;
+        }
+
+
+        // 19. Even / Odd Range
+
+        function range() {
+
+            let s = Number(document.getElementById("start").value);
+            let e = Number(document.getElementById("end").value);
+
+            let res = "";
+
+            for (let i = s; i <= e; i++) {
+
+                res +=
+                    i % 2 === 0
+                    ? `Even: ${i} <br>`
+                    : `Odd: ${i} <br>`;
+            }
+
+            document.getElementById("rangeResult").innerHTML =
+                res;
+        }
+
+
+        // 20. Mini Calculator
+
+        function append(v) {
+
+            document.getElementById("mini").value += v;
+        }
+
+        function calcMini() {
+
+            let expression =
+                document.getElementById("mini").value;
+
+            document.getElementById("miniResult").innerHTML =
+                eval(expression);
+        }
+
+
+        // 21. Email Validator
+
+        function checkEmail() {
+
+            let email =
+                document.getElementById("email").value;
+
+            let pattern =
+                /^\S+@\S+\.\S+$/;
+
+            document.getElementById("emailResult").innerHTML =
+                pattern.test(email)
+                ? "Valid Email"
+                : "Invalid Email";
+        }
+
+
+        // 22. Mobile Validator
+
+        function checkMobile() {
+
+            let mobile =
+                document.getElementById("mobile").value;
+
+            let pattern =
+                /^[0-9]{10}$/;
+
+            document.getElementById("phoneResult").innerHTML =
+                pattern.test(mobile)
+                ? "Valid"
+                : "Invalid";
+        }
+
+
+        // 23. Password Validator
+
+        function checkPass() {
+
+            let pass =
+                document.getElementById("pass").value;
+
+            let pattern =
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+            document.getElementById("passResult").innerHTML =
+                pattern.test(pass)
+                ? "Valid"
+                : "Invalid";
+        }
+
+
+        // 24. Only Alphabets
+
+        function checkAlpha() {
+
+            let str =
+                document.getElementById("text").value;
+
+            let pattern =
+                /^[A-Za-z]+$/;
+
+            document.getElementById("alphaResult").innerHTML =
+                pattern.test(str)
+                ? "Valid"
+                : "Invalid";
+        }
+
+
+        // 25. Only Numbers
+
+        function checkNumbers() {
+
+            let str =
+                document.getElementById("number25").value;
+
+            let pattern =
+                /^[0-9]+$/;
+
+            document.getElementById("numberResult").innerHTML =
+                pattern.test(str)
+                ? "Valid"
+                : "Invalid";
+        }
+
+
+        // 26. Registration Form
+
+        function validateRegistration() {
+
+            let name =
+                document.getElementById("regName").value;
+
+            let email =
+                document.getElementById("regEmail").value;
+
+            let mobile =
+                document.getElementById("regMobile").value;
+
+            let password =
+                document.getElementById("regPassword").value;
+
+
+            let namePattern =
+                /^[A-Za-z ]+$/;
+
+            let emailPattern =
+                /^\S+@\S+\.\S+$/;
+
+            let mobilePattern =
+                /^[0-9]{10}$/;
+
+            let passwordPattern =
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+
+            if (!namePattern.test(name)) {
+
+                document.getElementById("registrationResult").innerHTML =
+                    "Invalid Name";
+            }
+
+            else if (!emailPattern.test(email)) {
+
+                document.getElementById("registrationResult").innerHTML =
+                    "Invalid Email";
+            }
+
+            else if (!mobilePattern.test(mobile)) {
+
+                document.getElementById("registrationResult").innerHTML =
+                    "Invalid Mobile Number";
+            }
+
+            else if (!passwordPattern.test(password)) {
+
+                document.getElementById("registrationResult").innerHTML =
+                    "Invalid Password";
+            }
+
+            else {
+
+                document.getElementById("registrationResult").innerHTML =
+                    "Registration Successful";
+            }
+        }
+
+
+        // 27. Strong Password
+
+        function checkStrongPassword() {
+
+            let password =
+                document.getElementById("strongPass").value;
+
+            let pattern =
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+            document.getElementById("strongPassResult").innerHTML =
+                pattern.test(password)
+                ? "Valid Strong Password"
+                : "Invalid Password";
+        }
+
+
+        // 28. Username Validation
+
+        function checkUsername() {
+
+            let username =
+                document.getElementById("username28").value;
+
+            let pattern =
+                /^[A-Za-z0-9_]{5,15}$/;
+
+            document.getElementById("usernameResult").innerHTML =
+                pattern.test(username)
+                ? "Valid Username"
+                : "Invalid Username";
+        }
+
+
+        // 29. Name + Email + Mobile + PIN
+
+        function validateForm29() {
+
+            let name =
+                document.getElementById("name29").value;
+
+            let email =
+                document.getElementById("email29").value;
+
+            let mobile =
+                document.getElementById("mobile29").value;
+
+            let pin =
+                document.getElementById("pin29").value;
+
+
+            let namePattern =
+                /^[A-Za-z ]+$/;
+
+            let emailPattern =
+                /^\S+@\S+\.\S+$/;
+
+            let mobilePattern =
+                /^[0-9]{10}$/;
+
+            let pinPattern =
+                /^[0-9]{6}$/;
+
+
+            if (!namePattern.test(name)) {
+
+                document.getElementById("form29Result").innerHTML =
+                    "Invalid Name";
+            }
+
+            else if (!emailPattern.test(email)) {
+
+                document.getElementById("form29Result").innerHTML =
+                    "Invalid Email";
+            }
+
+            else if (!mobilePattern.test(mobile)) {
+
+                document.getElementById("form29Result").innerHTML =
+                    "Invalid Mobile Number";
+            }
+
+            else if (!pinPattern.test(pin)) {
+
+                document.getElementById("form29Result").innerHTML =
+                    "Invalid PIN Code";
+            }
+
+            else {
+
+                document.getElementById("form29Result").innerHTML =
+                    "All Details are Valid";
+            }
+        }
+
+
+        // 30. Email + Mobile + Password
+
+        function validateAll30() {
+
+            let email =
+                document.getElementById("email30").value;
+
+            let mobile =
+                document.getElementById("mobile30").value;
+
+            let password =
+                document.getElementById("password30").value;
+
+
+            let emailPattern =
+                /^\S+@\S+\.\S+$/;
+
+            let mobilePattern =
+                /^[0-9]{10}$/;
+
+            let passwordPattern =
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+
+            let result = "";
+
+
+            if (emailPattern.test(email)) {
+
+                result +=
+                    "Email: Valid<br>";
+            }
+
+            else {
+
+                result +=
+                    "Email: Invalid<br>";
+            }
+
+
+            if (mobilePattern.test(mobile)) {
+
+                result +=
+                    "Mobile: Valid<br>";
+            }
+
+            else {
+
+                result +=
+                    "Mobile: Invalid<br>";
+            }
+
+
+            if (passwordPattern.test(password)) {
+
+                result +=
+                    "Password: Valid";
+            }
+
+            else {
+
+                result +=
+                    "Password: Invalid";
+            }
+
+
+            document.getElementById("result30").innerHTML =
+                result;
+        }
+
+
+        // 31. onclick Alert
+
+        function showAlert31() {
+            alert("Button clicked!");
+        }
+
+
+        // 32. mouseover Background
+
+        function changeBgMouseover32() {
+            document.body.style.background = "lightgreen";
+        }
+
+
+        // 33. mousemove Coordinates
+
+        function showCoordinates33(event) {
+            document.getElementById("coordinates33").innerHTML =
+                `X: ${event.clientX}, Y: ${event.clientY}`;
+        }
+
+
+        // 34. Change Paragraph Text
+
+        function changeParagraph34() {
+            document.getElementById("text34").innerHTML =
+                "The paragraph text has been changed!";
+        }
+
+
+        // 35. keydown Event
+
+        function showKeyMessage35(event) {
+            document.getElementById("keyMessage35").innerHTML =
+                `You pressed: ${event.key}`;
+        }
+
+
+        // 36. Counter using Event Handling
+
+        let counter36 = 0;
+
+        function increment36() {
+            counter36++;
+            document.getElementById("counter36").innerHTML = counter36;
+        }
+
+        function decrement36() {
+            counter36--;
+            document.getElementById("counter36").innerHTML = counter36;
+        }
+
+
+        // 37. Mouse Enter / Leave
+
+        function enterDiv37() {
+            document.getElementById("colorBox37").style.background = "lightyellow";
+        }
+
+        function leaveDiv37() {
+            document.getElementById("colorBox37").style.background = "";
+        }
+
+
+        // 38. Form Submit
+
+        function submitForm38(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name38").value;
+            let email = document.getElementById("email38").value;
+
+            document.getElementById("formResult38").innerHTML =
+                `Name: ${name}<br>Email: ${email}`;
+        }
+
+
+        // 39. Image Gallery
+
+        let images39 = [
+            "https://tse4.mm.bing.net/th/id/OIP.ayACpdslq2Oq9hSUQnfMWQHaF1?r=0&pid=Api&P=0&h=180",
+            "https://pixabay.com/photos/autumn-foliage-leaves-fall-season-6780191/",
+            "https://pixabay.com/photos/bird-reeds-nature-wild-yellow-10403712/"
+        ];
+
+        let currentImage39 = 0;
+
+        function nextImage39() {
+            currentImage39++;
+
+            if (currentImage39 >= images39.length) {
+                currentImage39 = 0;
+            }
+
+            document.getElementById("galleryImage39").src =
+                images39[currentImage39];
+        }
+
+        function previousImage39() {
+            currentImage39--;
+
+            if (currentImage39 < 0) {
+                currentImage39 = images39.length - 1;
+            }
+
+            document.getElementById("galleryImage39").src =
+                images39[currentImage39];
+        }
+
+
+        // 40. Character Counter
+
+        function countCharacters40() {
+            let text = document.getElementById("textBox40").value;
+
+            document.getElementById("charCount40").innerHTML =
+                text.length;
         }
 
     </script>
