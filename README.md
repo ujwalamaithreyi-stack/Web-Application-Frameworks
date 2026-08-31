@@ -13,4 +13,4 @@
 **Objective**: Creating a responsive webpage for a college technical fest that displays event information using semantic HTML and responsive CSS layouts.
 
 ## 3.1. JavaScript Programs
-**Objective**: A beginner-friendly web project that combines 14 basic JavaScript programs into one interactive webpage, built using HTML, CSS, and JavaScript
+**Objective**: A beginner-friendly web project that combines 40 basic JavaScript programs into one interactive webpage, built using HTML, CSS, and JavaScript
