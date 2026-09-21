@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+#root {
+  width: 100%;
+}
+
+.app {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+button {
+  padding: 8px 14px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+input {
+  padding: 9px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+li {
+  margin: 8px 0;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.product {
+  margin-bottom: 10px;
+}
+
+.attendance-row {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
