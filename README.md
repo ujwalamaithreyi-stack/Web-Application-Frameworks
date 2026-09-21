@@ -12,5 +12,8 @@
 ## 2.2. Responsive College Event Management Web Page
 **Objective**: Creating a responsive webpage for a college technical fest that displays event information using semantic HTML and responsive CSS layouts.
 
-## 3.1. JavaScript Programs
+## 3. JavaScript Programs
 **Objective**: A beginner-friendly web project that combines 40 basic JavaScript programs into one interactive webpage, built using HTML, CSS, and JavaScript
+
+## 4. ReactJS Programs
+**objective**: Developing an application that demonstrates the use of functional components, JSX, props, state management, hooks, Context API, and useReducer
