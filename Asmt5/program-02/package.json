@@ -1,0 +1,9 @@
+{
+  "name": "program-02-nodejs-modules-and-file-handling",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NODEJS MODULES AND FILE HANDLING",
+  "scripts": {
+    "start": "node app.js"
+  }
+}

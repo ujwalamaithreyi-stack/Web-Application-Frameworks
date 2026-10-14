@@ -1,0 +1,12 @@
+{
+  "name": "program-17-nodejs-expressjs-student-management-rest-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NODEJS + EXPRESSJS STUDENT MANAGEMENT REST API",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "program-07-rest-api-for-student-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "REST API FOR STUDENT MANAGEMENT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

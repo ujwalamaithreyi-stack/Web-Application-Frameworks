@@ -1,0 +1,12 @@
+{
+  "name": "program-04-expressjs-routing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EXPRESSJS ROUTING",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

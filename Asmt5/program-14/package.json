@@ -1,0 +1,12 @@
+{
+  "name": "program-14-nodejs-express-server-home-about-contact",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NODEJS EXPRESS SERVER \u2013 HOME, ABOUT, CONTACT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest"
+  }
+}

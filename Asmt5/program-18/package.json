@@ -1,0 +1,12 @@
+{
+  "name": "program-18-online-event-management-rest-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ONLINE EVENT MANAGEMENT REST API",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest"
+  }
+}

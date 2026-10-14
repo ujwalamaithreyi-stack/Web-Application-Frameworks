@@ -1,0 +1,9 @@
+{
+  "name": "program-01-basic-nodejs-http-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BASIC NODEJS HTTP SERVER",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

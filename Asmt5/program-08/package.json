@@ -1,0 +1,12 @@
+{
+  "name": "program-08-rest-api-with-put-and-delete",
+  "version": "1.0.0",
+  "private": true,
+  "description": "REST API WITH PUT AND DELETE",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
